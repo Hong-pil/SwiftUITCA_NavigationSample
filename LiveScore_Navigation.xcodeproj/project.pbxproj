@@ -1,0 +1,668 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E0FB7CAD2C5664AC00D9C854 /* LiveScore_NavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FB7CAC2C5664AC00D9C854 /* LiveScore_NavigationApp.swift */; };
+		E0FB7CB12C5664AE00D9C854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0FB7CB02C5664AE00D9C854 /* Assets.xcassets */; };
+		E0FB7CB42C5664AE00D9C854 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0FB7CB32C5664AE00D9C854 /* Preview Assets.xcassets */; };
+		E0FB7CBE2C5664AE00D9C854 /* LiveScore_NavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FB7CBD2C5664AE00D9C854 /* LiveScore_NavigationTests.swift */; };
+		E0FB7CC82C5664AE00D9C854 /* LiveScore_NavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FB7CC72C5664AE00D9C854 /* LiveScore_NavigationUITests.swift */; };
+		E0FB7CCA2C5664AE00D9C854 /* LiveScore_NavigationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FB7CC92C5664AE00D9C854 /* LiveScore_NavigationUITestsLaunchTests.swift */; };
+		E0FB7CDB2C56652200D9C854 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FB7CDA2C56652200D9C854 /* Screen.swift */; };
+		E0FB7CE42C566D8B00D9C854 /* Step01Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FB7CE32C566D8B00D9C854 /* Step01Page.swift */; };
+		E0FB7CE62C566D9500D9C854 /* Step02Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FB7CE52C566D9500D9C854 /* Step02Page.swift */; };
+		E0FB7CE82C566D9E00D9C854 /* Step03Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FB7CE72C566D9E00D9C854 /* Step03Page.swift */; };
+		E0FB7CEB2C566DFF00D9C854 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = E0FB7CEA2C566DFF00D9C854 /* ComposableArchitecture */; };
+		E0FB7CED2C56706100D9C854 /* MainNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FB7CEC2C56706100D9C854 /* MainNaviView.swift */; };
+		E0FB7CEF2C5670AF00D9C854 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FB7CEE2C5670AF00D9C854 /* AppState.swift */; };
+		E0FB7CF22C56797E00D9C854 /* Claude_ToDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FB7CF12C56797E00D9C854 /* Claude_ToDoApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E0FB7CBA2C5664AE00D9C854 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0FB7CA12C5664AC00D9C854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0FB7CA82C5664AC00D9C854;
+			remoteInfo = LiveScore_Navigation;
+		};
+		E0FB7CC42C5664AE00D9C854 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0FB7CA12C5664AC00D9C854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0FB7CA82C5664AC00D9C854;
+			remoteInfo = LiveScore_Navigation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E0FB7CA92C5664AC00D9C854 /* LiveScore_Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveScore_Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0FB7CAC2C5664AC00D9C854 /* LiveScore_NavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScore_NavigationApp.swift; sourceTree = "<group>"; };
+		E0FB7CB02C5664AE00D9C854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E0FB7CB32C5664AE00D9C854 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E0FB7CB92C5664AE00D9C854 /* LiveScore_NavigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveScore_NavigationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0FB7CBD2C5664AE00D9C854 /* LiveScore_NavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScore_NavigationTests.swift; sourceTree = "<group>"; };
+		E0FB7CC32C5664AE00D9C854 /* LiveScore_NavigationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveScore_NavigationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0FB7CC72C5664AE00D9C854 /* LiveScore_NavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScore_NavigationUITests.swift; sourceTree = "<group>"; };
+		E0FB7CC92C5664AE00D9C854 /* LiveScore_NavigationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScore_NavigationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E0FB7CDA2C56652200D9C854 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		E0FB7CE32C566D8B00D9C854 /* Step01Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step01Page.swift; sourceTree = "<group>"; };
+		E0FB7CE52C566D9500D9C854 /* Step02Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step02Page.swift; sourceTree = "<group>"; };
+		E0FB7CE72C566D9E00D9C854 /* Step03Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step03Page.swift; sourceTree = "<group>"; };
+		E0FB7CEC2C56706100D9C854 /* MainNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNaviView.swift; sourceTree = "<group>"; };
+		E0FB7CEE2C5670AF00D9C854 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		E0FB7CF12C56797E00D9C854 /* Claude_ToDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Claude_ToDoApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E0FB7CA62C5664AC00D9C854 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0FB7CEB2C566DFF00D9C854 /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0FB7CB62C5664AE00D9C854 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0FB7CC02C5664AE00D9C854 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E0FB7CA02C5664AC00D9C854 = {
+			isa = PBXGroup;
+			children = (
+				E0FB7CAB2C5664AC00D9C854 /* LiveScore_Navigation */,
+				E0FB7CBC2C5664AE00D9C854 /* LiveScore_NavigationTests */,
+				E0FB7CC62C5664AE00D9C854 /* LiveScore_NavigationUITests */,
+				E0FB7CAA2C5664AC00D9C854 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E0FB7CAA2C5664AC00D9C854 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0FB7CA92C5664AC00D9C854 /* LiveScore_Navigation.app */,
+				E0FB7CB92C5664AE00D9C854 /* LiveScore_NavigationTests.xctest */,
+				E0FB7CC32C5664AE00D9C854 /* LiveScore_NavigationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0FB7CAB2C5664AC00D9C854 /* LiveScore_Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				E0FB7CAC2C5664AC00D9C854 /* LiveScore_NavigationApp.swift */,
+				E0FB7CF02C56796600D9C854 /* Claude_ToDoApp */,
+				E0FB7CD92C56650700D9C854 /* App */,
+				E0FB7CB02C5664AE00D9C854 /* Assets.xcassets */,
+				E0FB7CB22C5664AE00D9C854 /* Preview Content */,
+			);
+			path = LiveScore_Navigation;
+			sourceTree = "<group>";
+		};
+		E0FB7CB22C5664AE00D9C854 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E0FB7CB32C5664AE00D9C854 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E0FB7CBC2C5664AE00D9C854 /* LiveScore_NavigationTests */ = {
+			isa = PBXGroup;
+			children = (
+				E0FB7CBD2C5664AE00D9C854 /* LiveScore_NavigationTests.swift */,
+			);
+			path = LiveScore_NavigationTests;
+			sourceTree = "<group>";
+		};
+		E0FB7CC62C5664AE00D9C854 /* LiveScore_NavigationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E0FB7CC72C5664AE00D9C854 /* LiveScore_NavigationUITests.swift */,
+				E0FB7CC92C5664AE00D9C854 /* LiveScore_NavigationUITestsLaunchTests.swift */,
+			);
+			path = LiveScore_NavigationUITests;
+			sourceTree = "<group>";
+		};
+		E0FB7CD92C56650700D9C854 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E0FB7CE22C566D7A00D9C854 /* Page */,
+				E0FB7CDA2C56652200D9C854 /* Screen.swift */,
+				E0FB7CEC2C56706100D9C854 /* MainNaviView.swift */,
+				E0FB7CEE2C5670AF00D9C854 /* AppState.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E0FB7CE22C566D7A00D9C854 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				E0FB7CE32C566D8B00D9C854 /* Step01Page.swift */,
+				E0FB7CE52C566D9500D9C854 /* Step02Page.swift */,
+				E0FB7CE72C566D9E00D9C854 /* Step03Page.swift */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		E0FB7CF02C56796600D9C854 /* Claude_ToDoApp */ = {
+			isa = PBXGroup;
+			children = (
+				E0FB7CF12C56797E00D9C854 /* Claude_ToDoApp.swift */,
+			);
+			path = Claude_ToDoApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E0FB7CA82C5664AC00D9C854 /* LiveScore_Navigation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0FB7CCD2C5664AE00D9C854 /* Build configuration list for PBXNativeTarget "LiveScore_Navigation" */;
+			buildPhases = (
+				E0FB7CA52C5664AC00D9C854 /* Sources */,
+				E0FB7CA62C5664AC00D9C854 /* Frameworks */,
+				E0FB7CA72C5664AC00D9C854 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiveScore_Navigation;
+			packageProductDependencies = (
+				E0FB7CEA2C566DFF00D9C854 /* ComposableArchitecture */,
+			);
+			productName = LiveScore_Navigation;
+			productReference = E0FB7CA92C5664AC00D9C854 /* LiveScore_Navigation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E0FB7CB82C5664AE00D9C854 /* LiveScore_NavigationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0FB7CD02C5664AE00D9C854 /* Build configuration list for PBXNativeTarget "LiveScore_NavigationTests" */;
+			buildPhases = (
+				E0FB7CB52C5664AE00D9C854 /* Sources */,
+				E0FB7CB62C5664AE00D9C854 /* Frameworks */,
+				E0FB7CB72C5664AE00D9C854 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0FB7CBB2C5664AE00D9C854 /* PBXTargetDependency */,
+			);
+			name = LiveScore_NavigationTests;
+			productName = LiveScore_NavigationTests;
+			productReference = E0FB7CB92C5664AE00D9C854 /* LiveScore_NavigationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E0FB7CC22C5664AE00D9C854 /* LiveScore_NavigationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0FB7CD32C5664AE00D9C854 /* Build configuration list for PBXNativeTarget "LiveScore_NavigationUITests" */;
+			buildPhases = (
+				E0FB7CBF2C5664AE00D9C854 /* Sources */,
+				E0FB7CC02C5664AE00D9C854 /* Frameworks */,
+				E0FB7CC12C5664AE00D9C854 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0FB7CC52C5664AE00D9C854 /* PBXTargetDependency */,
+			);
+			name = LiveScore_NavigationUITests;
+			productName = LiveScore_NavigationUITests;
+			productReference = E0FB7CC32C5664AE00D9C854 /* LiveScore_NavigationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E0FB7CA12C5664AC00D9C854 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					E0FB7CA82C5664AC00D9C854 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					E0FB7CB82C5664AE00D9C854 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = E0FB7CA82C5664AC00D9C854;
+					};
+					E0FB7CC22C5664AE00D9C854 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = E0FB7CA82C5664AC00D9C854;
+					};
+				};
+			};
+			buildConfigurationList = E0FB7CA42C5664AC00D9C854 /* Build configuration list for PBXProject "LiveScore_Navigation" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E0FB7CA02C5664AC00D9C854;
+			packageReferences = (
+				E0FB7CE92C566DFF00D9C854 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
+			productRefGroup = E0FB7CAA2C5664AC00D9C854 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E0FB7CA82C5664AC00D9C854 /* LiveScore_Navigation */,
+				E0FB7CB82C5664AE00D9C854 /* LiveScore_NavigationTests */,
+				E0FB7CC22C5664AE00D9C854 /* LiveScore_NavigationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E0FB7CA72C5664AC00D9C854 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0FB7CB42C5664AE00D9C854 /* Preview Assets.xcassets in Resources */,
+				E0FB7CB12C5664AE00D9C854 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0FB7CB72C5664AE00D9C854 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0FB7CC12C5664AE00D9C854 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E0FB7CA52C5664AC00D9C854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0FB7CE42C566D8B00D9C854 /* Step01Page.swift in Sources */,
+				E0FB7CED2C56706100D9C854 /* MainNaviView.swift in Sources */,
+				E0FB7CEF2C5670AF00D9C854 /* AppState.swift in Sources */,
+				E0FB7CF22C56797E00D9C854 /* Claude_ToDoApp.swift in Sources */,
+				E0FB7CAD2C5664AC00D9C854 /* LiveScore_NavigationApp.swift in Sources */,
+				E0FB7CDB2C56652200D9C854 /* Screen.swift in Sources */,
+				E0FB7CE82C566D9E00D9C854 /* Step03Page.swift in Sources */,
+				E0FB7CE62C566D9500D9C854 /* Step02Page.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0FB7CB52C5664AE00D9C854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0FB7CBE2C5664AE00D9C854 /* LiveScore_NavigationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0FB7CBF2C5664AE00D9C854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0FB7CC82C5664AE00D9C854 /* LiveScore_NavigationUITests.swift in Sources */,
+				E0FB7CCA2C5664AE00D9C854 /* LiveScore_NavigationUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E0FB7CBB2C5664AE00D9C854 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0FB7CA82C5664AC00D9C854 /* LiveScore_Navigation */;
+			targetProxy = E0FB7CBA2C5664AE00D9C854 /* PBXContainerItemProxy */;
+		};
+		E0FB7CC52C5664AE00D9C854 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0FB7CA82C5664AC00D9C854 /* LiveScore_Navigation */;
+			targetProxy = E0FB7CC42C5664AE00D9C854 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E0FB7CCB2C5664AE00D9C854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E0FB7CCC2C5664AE00D9C854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E0FB7CCE2C5664AE00D9C854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LiveScore_Navigation/Preview Content\"";
+				DEVELOPMENT_TEAM = RS7JFS2M68;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.idpil.LiveScore-Navigation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E0FB7CCF2C5664AE00D9C854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LiveScore_Navigation/Preview Content\"";
+				DEVELOPMENT_TEAM = RS7JFS2M68;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.idpil.LiveScore-Navigation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E0FB7CD12C5664AE00D9C854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RS7JFS2M68;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.idpil.LiveScore-NavigationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiveScore_Navigation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LiveScore_Navigation";
+			};
+			name = Debug;
+		};
+		E0FB7CD22C5664AE00D9C854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RS7JFS2M68;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.idpil.LiveScore-NavigationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiveScore_Navigation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LiveScore_Navigation";
+			};
+			name = Release;
+		};
+		E0FB7CD42C5664AE00D9C854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RS7JFS2M68;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.idpil.LiveScore-NavigationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LiveScore_Navigation;
+			};
+			name = Debug;
+		};
+		E0FB7CD52C5664AE00D9C854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RS7JFS2M68;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.idpil.LiveScore-NavigationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LiveScore_Navigation;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E0FB7CA42C5664AC00D9C854 /* Build configuration list for PBXProject "LiveScore_Navigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0FB7CCB2C5664AE00D9C854 /* Debug */,
+				E0FB7CCC2C5664AE00D9C854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0FB7CCD2C5664AE00D9C854 /* Build configuration list for PBXNativeTarget "LiveScore_Navigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0FB7CCE2C5664AE00D9C854 /* Debug */,
+				E0FB7CCF2C5664AE00D9C854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0FB7CD02C5664AE00D9C854 /* Build configuration list for PBXNativeTarget "LiveScore_NavigationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0FB7CD12C5664AE00D9C854 /* Debug */,
+				E0FB7CD22C5664AE00D9C854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0FB7CD32C5664AE00D9C854 /* Build configuration list for PBXNativeTarget "LiveScore_NavigationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0FB7CD42C5664AE00D9C854 /* Debug */,
+				E0FB7CD52C5664AE00D9C854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E0FB7CE92C566DFF00D9C854 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.12.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E0FB7CEA2C566DFF00D9C854 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0FB7CE92C566DFF00D9C854 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E0FB7CA12C5664AC00D9C854 /* Project object */;
+}
