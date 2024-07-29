@@ -7,7 +7,6 @@
 
 import SwiftUI
 import ComposableArchitecture
-import Combine
 
 // MARK: - ToDo 모델
 struct ToDo: Equatable, Identifiable {
@@ -20,7 +19,6 @@ struct ToDo: Equatable, Identifiable {
 class AppState_Claude: ObservableObject {
     static let shared = AppState_Claude()
     @Published var mainNavi: [Screen_Claude] = []
-    @Published var todos: [ToDo] = []
     
     private init() {}
 }
@@ -89,6 +87,8 @@ struct TodoListReducer {
     struct State: Equatable {
         var id = UUID()
         var todos: [ToDo] = []
+        var addTodoState: AddTodoReducer.State?
+        var todoDetailState: TodoDetailReducer.State?
     }
     
     enum Action {
@@ -97,41 +97,62 @@ struct TodoListReducer {
         case todoTapped(ToDo)
         case toggleCompleted(ToDo)
         case deleteTodo(IndexSet)
-        case updateTodos
+        case addTodo(AddTodoReducer.Action)
+        case todoDetail(TodoDetailReducer.Action)
     }
     
     var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
             case .onAppear:
-                return .send(.updateTodos)
+                return .none
             case .addTodoTapped:
-                NaviPath_Claude.main.push(.addTodo(AddTodoReducer.State()))
-                return .none
+                state.addTodoState = AddTodoReducer.State()
+                return .run { send in
+                    await NaviPath_Claude.main.push(.addTodo(AddTodoReducer.State()))
+                }
             case .todoTapped(let todo):
-                NaviPath_Claude.main.push(.todoDetail(.init(todo: todo)))
-                return .none
+                state.todoDetailState = TodoDetailReducer.State(todo: todo)
+                return .run { send in
+                    await NaviPath_Claude.main.push(.todoDetail(.init(todo: todo)))
+                }
             case .toggleCompleted(let todo):
                 if let index = state.todos.firstIndex(where: { $0.id == todo.id }) {
                     state.todos[index].isCompleted.toggle()
-                    AppState_Claude.shared.todos = state.todos
                 }
                 return .none
             case .deleteTodo(let indexSet):
                 state.todos.remove(atOffsets: indexSet)
-                AppState_Claude.shared.todos = state.todos
                 return .none
-            case .updateTodos:
-                state.todos = AppState_Claude.shared.todos
+            case .addTodo(.delegate(.didAddTodo(let newTodo))):
+                print("idpil::: called addTodo")
+                state.todos.append(newTodo)
+                return .run { _ in
+                    await NaviPath_Claude.main.pop()
+                }
+            case .addTodo:
+                return .none
+            case .todoDetail(.toggleCompleted):
+                if var todo = state.todoDetailState?.todo,
+                   let index = state.todos.firstIndex(where: { $0.id == todo.id }) {
+                    todo.isCompleted.toggle()
+                    state.todos[index] = todo
+                    state.todoDetailState?.todo = todo
+                }
                 return .none
             }
+        }
+        .ifLet(\.addTodoState, action: /Action.addTodo) {
+            AddTodoReducer()
+        }
+        .ifLet(\.todoDetailState, action: /Action.todoDetail) {
+            TodoDetailReducer()
         }
     }
 }
 
 // MARK: - TodoListView
 struct TodoListView: View {
-    @EnvironmentObject var appState: AppState_Claude
     let store: StoreOf<TodoListReducer>
     
     var body: some View {
@@ -172,9 +193,6 @@ struct TodoListView: View {
             .onAppear {
                 viewStore.send(.onAppear)
             }
-            .onChange(of: appState.todos) { _ in
-                viewStore.send(.updateTodos)
-            }
         }
     }
 }
@@ -186,16 +204,16 @@ struct AddTodoReducer {
     struct State: Equatable {
         var id = UUID()
         var title: String = ""
-        
-        init(id: UUID = UUID(), title: String = "") {
-            self.id = id
-            self.title = title
-        }
     }
     
     enum Action {
         case setTitle(String)
-        case addTodo
+        case addTodoButtonTapped
+        case delegate(Delegate)
+        
+        enum Delegate: Equatable {
+            case didAddTodo(ToDo)
+        }
     }
     
     var body: some Reducer<State, Action> {
@@ -204,10 +222,12 @@ struct AddTodoReducer {
             case .setTitle(let title):
                 state.title = title
                 return .none
-            case .addTodo:
+            case .addTodoButtonTapped:
+                print("idpil::: called addTodoButtonTapped")
                 let newTodo = ToDo(id: UUID(), title: state.title, isCompleted: false)
-                AppState_Claude.shared.todos.append(newTodo)
-                NaviPath_Claude.main.pop()
+                print("idpil::: newTodo : \(newTodo)")
+                return .send(.delegate(.didAddTodo(newTodo)))
+            case .delegate:
                 return .none
             }
         }
@@ -216,7 +236,6 @@ struct AddTodoReducer {
 
 // MARK: - AddTodoView
 struct AddTodoView: View {
-    @EnvironmentObject var appState: AppState_Claude
     let store: StoreOf<AddTodoReducer>
     
     var body: some View {
@@ -227,14 +246,13 @@ struct AddTodoView: View {
                     send: AddTodoReducer.Action.setTitle
                 ))
                 Button("Add Todo") {
-                    viewStore.send(.addTodo)
+                    viewStore.send(.addTodoButtonTapped)
                 }
             }
             .navigationTitle("Add Todo")
         }
     }
 }
-
 // MARK: - TodoDetailReducer
 @Reducer
 struct TodoDetailReducer {
@@ -253,9 +271,6 @@ struct TodoDetailReducer {
             switch action {
             case .toggleCompleted:
                 state.todo.isCompleted.toggle()
-                if let index = AppState_Claude.shared.todos.firstIndex(where: { $0.id == state.todo.id }) {
-                    AppState_Claude.shared.todos[index] = state.todo
-                }
                 return .none
             }
         }
@@ -264,7 +279,6 @@ struct TodoDetailReducer {
 
 // MARK: - TodoDetailView
 struct TodoDetailView: View {
-    @EnvironmentObject var appState: AppState_Claude
     let store: StoreOf<TodoDetailReducer>
     
     var body: some View {
@@ -285,50 +299,69 @@ enum NaviPath_Claude: CaseIterable {
     case main
     
     static func push(_ screen: Screen_Claude) {
-        self.main.push(screen)
+        Task { @MainActor in
+            self.main.push(screen)
+        }
     }
+    
     static func pop() {
-        self.main.pop()
+        Task { @MainActor in
+            self.main.pop()
+        }
     }
+    
     static func popRoot() {
-        self.main.popRoot()
+        Task { @MainActor in
+            self.main.popRoot()
+        }
     }
     
     static func popToIndex(_ index: Int) {
-        self.main.popToIndex(index)
+        Task { @MainActor in
+            self.main.popToIndex(index)
+        }
     }
     
     func push(_ screen: Screen_Claude) {
-        switch self {
-        case .main:
-            AppState_Claude.shared.mainNavi.append(screen)
+        Task { @MainActor in
+            switch self {
+            case .main:
+                AppState_Claude.shared.mainNavi.append(screen)
+            }
         }
     }
     
     func pop() {
-        switch self {
-        case .main:
-            if AppState_Claude.shared.mainNavi.count > 0 {
-                AppState_Claude.shared.mainNavi.removeLast()
+        Task { @MainActor in
+            switch self {
+            case .main:
+                if AppState_Claude.shared.mainNavi.count > 0 {
+                    AppState_Claude.shared.mainNavi.removeLast()
+                }
             }
         }
     }
+    
     func popRoot() {
-        switch self {
-        case .main:
-            AppState_Claude.shared.mainNavi = []
+        Task { @MainActor in
+            switch self {
+            case .main:
+                AppState_Claude.shared.mainNavi = []
+            }
         }
     }
     
     func popToIndex(_ index: Int) {
-        switch self {
-        case .main:
-            if AppState_Claude.shared.mainNavi.count > 0 {
-                if index > 0 && index < AppState_Claude.shared.mainNavi.count {
-                    AppState_Claude.shared.mainNavi.removeLast(index)
-                }
-                else {
-                    AppState_Claude.shared.mainNavi.removeLast()
+        Task { @MainActor in
+            switch self {
+            case .main:
+                if AppState_Claude.shared.mainNavi.count > 0 {
+                    if index > 0 && index < AppState_Claude.shared.mainNavi.count {
+                        AppState_Claude.shared.mainNavi.removeLast(index)
+                    }
+                    else {
+                        AppState_Claude.shared.mainNavi.removeLast()
+                    }
                 }
             }
         }
