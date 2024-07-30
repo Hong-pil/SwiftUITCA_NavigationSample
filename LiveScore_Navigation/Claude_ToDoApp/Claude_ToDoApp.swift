@@ -89,6 +89,13 @@ struct TodoListReducer {
         var todos: [ToDo] = []
         var addTodoState: AddTodoReducer.State?
         var todoDetailState: TodoDetailReducer.State?
+        
+        
+        // Api
+        var allToDoList: [TodosData]?
+        var isLoading = false
+        var error: ApiError?
+        
     }
     
     enum Action {
@@ -99,12 +106,20 @@ struct TodoListReducer {
         case deleteTodo(IndexSet)
         case addTodo(AddTodoReducer.Action)
         case todoDetail(TodoDetailReducer.Action)
+        
+        // Api
+        case getAllTodoList
+        case getAllTodoListResponse(TaskResult<[TodosData]>)
     }
+    
+    @Dependency(\.apiClient) var apiClient
     
     var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
             case .onAppear:
+                fLog("idpil::: called TodoList onAppear :>")
+                
                 return .none
             case .addTodoTapped:
                 state.addTodoState = AddTodoReducer.State()
@@ -140,6 +155,28 @@ struct TodoListReducer {
                     state.todoDetailState?.todo = todo
                 }
                 return .none
+                
+                
+                // Api
+            case .getAllTodoList:
+                state.isLoading = true
+                state.error = nil
+                
+                return .run { send in
+                    await send(.getAllTodoListResponse(
+                        TaskResult { try await apiClient.getTodoAllList()}
+                    ))
+                }
+                
+            case let .getAllTodoListResponse(.success(data)):
+                state.isLoading = false
+                state.allToDoList = data
+                return .none
+                
+            case let .getAllTodoListResponse(.failure(error)):
+                state.isLoading = false
+                state.error = error as? ApiError ?? .unknownError(error.localizedDescription)
+                return .none
             }
         }
         .ifLet(\.addTodoState, action: /Action.addTodo) {
@@ -157,29 +194,44 @@ struct TodoListView: View {
     
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
-            List {
-                ForEach(viewStore.todos) { todo in
-                    HStack {
-                        Text(todo.title)
-                        Spacer()
-                        if todo.isCompleted {
-                            Image(systemName: "checkmark")
+            VStack {
+                List {
+                    ForEach(viewStore.todos) { todo in
+                        HStack {
+                            Text(todo.title)
+                            Spacer()
+                            if todo.isCompleted {
+                                Image(systemName: "checkmark")
+                            }
+                        }
+                        .onTapGesture {
+                            viewStore.send(.todoTapped(todo))
+                        }
+                        .swipeActions {
+                            Button {
+                                viewStore.send(.toggleCompleted(todo))
+                            } label: {
+                                Label("Toggle", systemImage: "checkmark.circle")
+                            }
+                            .tint(.blue)
                         }
                     }
-                    .onTapGesture {
-                        viewStore.send(.todoTapped(todo))
-                    }
-                    .swipeActions {
-                        Button {
-                            viewStore.send(.toggleCompleted(todo))
-                        } label: {
-                            Label("Toggle", systemImage: "checkmark.circle")
-                        }
-                        .tint(.blue)
+                    .onDelete { indexSet in
+                        viewStore.send(.deleteTodo(indexSet))
                     }
                 }
-                .onDelete { indexSet in
-                    viewStore.send(.deleteTodo(indexSet))
+                
+                if (viewStore.allToDoList?.count ?? 0) > 0 {
+                    if let todoList = viewStore.allToDoList {
+                        List {
+                            ForEach(todoList, id: \.self) { todo in
+                                HStack {
+                                    Text(todo.title ?? "")
+                                    Spacer()
+                                }
+                            }
+                        }
+                    }
                 }
             }
             .navigationTitle("Todo List")
@@ -192,6 +244,9 @@ struct TodoListView: View {
             }
             .onAppear {
                 viewStore.send(.onAppear)
+                
+                // api
+                viewStore.send(.getAllTodoList)
             }
         }
     }

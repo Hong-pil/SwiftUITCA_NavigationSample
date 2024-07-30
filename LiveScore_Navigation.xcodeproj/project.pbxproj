@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDE7E46F2C58D55200665747 /* DefineUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E46E2C58D55200665747 /* DefineUrl.swift */; };
+		CDE7E4742C58D5A100665747 /* CommonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E4732C58D5A100665747 /* CommonModel.swift */; };
+		CDE7E4762C58D5A900665747 /* ConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E4752C58D5A900665747 /* ConfigModel.swift */; };
+		CDE7E4782C58D5B400665747 /* WordListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E4772C58D5B400665747 /* WordListModel.swift */; };
+		CDE7E47A2C58D5C100665747 /* Apis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E4792C58D5C100665747 /* Apis.swift */; };
+		CDE7E47C2C58D5C900665747 /* Apis+WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E47B2C58D5C900665747 /* Apis+WordList.swift */; };
+		CDE7E47E2C58D5D200665747 /* ApiControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E47D2C58D5D200665747 /* ApiControl.swift */; };
+		CDE7E4802C58D5DA00665747 /* ApiControl+WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E47F2C58D5DA00665747 /* ApiControl+WordList.swift */; };
+		CDE7E4832C58D66300665747 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = CDE7E4822C58D66300665747 /* Moya */; };
+		CDE7E4862C58D78B00665747 /* CommonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E4852C58D78B00665747 /* CommonFunction.swift */; };
+		CDE7E4882C58D7A400665747 /* DefineKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E4872C58D7A400665747 /* DefineKey.swift */; };
+		CDE7E48B2C58D7CD00665747 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E48A2C58D7CD00665747 /* UserManager.swift */; };
+		CDE7E48D2C58D89600665747 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E48C2C58D89600665747 /* Define.swift */; };
+		CDE7E48F2C58D8E200665747 /* DefineEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E48E2C58D8E200665747 /* DefineEnum.swift */; };
+		CDE7E4922C58D99000665747 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E4912C58D99000665747 /* ApiError.swift */; };
+		CDE7E4942C58DD3D00665747 /* Claude_ToDoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E4932C58DD3D00665747 /* Claude_ToDoService.swift */; };
+		CDE7E4962C58E21E00665747 /* TodosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E4952C58E21E00665747 /* TodosModel.swift */; };
+		CDE7E4982C58E81A00665747 /* Apis+Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E4972C58E81A00665747 /* Apis+Todos.swift */; };
+		CDE7E49A2C58E82700665747 /* ApiControl+Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7E4992C58E82700665747 /* ApiControl+Todos.swift */; };
 		E0FB7CAD2C5664AC00D9C854 /* LiveScore_NavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FB7CAC2C5664AC00D9C854 /* LiveScore_NavigationApp.swift */; };
 		E0FB7CB12C5664AE00D9C854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0FB7CB02C5664AE00D9C854 /* Assets.xcassets */; };
 		E0FB7CB42C5664AE00D9C854 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0FB7CB32C5664AE00D9C854 /* Preview Assets.xcassets */; };
@@ -41,6 +60,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CDE7E46E2C58D55200665747 /* DefineUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineUrl.swift; sourceTree = "<group>"; };
+		CDE7E4732C58D5A100665747 /* CommonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModel.swift; sourceTree = "<group>"; };
+		CDE7E4752C58D5A900665747 /* ConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigModel.swift; sourceTree = "<group>"; };
+		CDE7E4772C58D5B400665747 /* WordListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListModel.swift; sourceTree = "<group>"; };
+		CDE7E4792C58D5C100665747 /* Apis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apis.swift; sourceTree = "<group>"; };
+		CDE7E47B2C58D5C900665747 /* Apis+WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Apis+WordList.swift"; sourceTree = "<group>"; };
+		CDE7E47D2C58D5D200665747 /* ApiControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiControl.swift; sourceTree = "<group>"; };
+		CDE7E47F2C58D5DA00665747 /* ApiControl+WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiControl+WordList.swift"; sourceTree = "<group>"; };
+		CDE7E4852C58D78B00665747 /* CommonFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunction.swift; sourceTree = "<group>"; };
+		CDE7E4872C58D7A400665747 /* DefineKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineKey.swift; sourceTree = "<group>"; };
+		CDE7E48A2C58D7CD00665747 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		CDE7E48C2C58D89600665747 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		CDE7E48E2C58D8E200665747 /* DefineEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineEnum.swift; sourceTree = "<group>"; };
+		CDE7E4912C58D99000665747 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		CDE7E4932C58DD3D00665747 /* Claude_ToDoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Claude_ToDoService.swift; sourceTree = "<group>"; };
+		CDE7E4952C58E21E00665747 /* TodosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosModel.swift; sourceTree = "<group>"; };
+		CDE7E4972C58E81A00665747 /* Apis+Todos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Apis+Todos.swift"; sourceTree = "<group>"; };
+		CDE7E4992C58E82700665747 /* ApiControl+Todos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiControl+Todos.swift"; sourceTree = "<group>"; };
 		E0FB7CA92C5664AC00D9C854 /* LiveScore_Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveScore_Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FB7CAC2C5664AC00D9C854 /* LiveScore_NavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScore_NavigationApp.swift; sourceTree = "<group>"; };
 		E0FB7CB02C5664AE00D9C854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE7E4832C58D66300665747 /* Moya in Frameworks */,
 				E0FB7CEB2C566DFF00D9C854 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +123,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CDE7E46B2C58D48500665747 /* Data, Define, Functions, Modifier, Extension, Modules, Db */ = {
+			isa = PBXGroup;
+			children = (
+				CDE7E46C2C58D4AA00665747 /* 1. Define(Key, Enum, Size, Url) */,
+				CDE7E4892C58D7C100665747 /* 2. Manager */,
+				CDE7E4842C58D76A00665747 /* 3. Common(Function, Size) */,
+				CDE7E46D2C58D4C100665747 /* 4. Api, Codables */,
+				CDE7E4902C58D98400665747 /* 13. Error */,
+			);
+			path = "Data, Define, Functions, Modifier, Extension, Modules, Db";
+			sourceTree = "<group>";
+		};
+		CDE7E46C2C58D4AA00665747 /* 1. Define(Key, Enum, Size, Url) */ = {
+			isa = PBXGroup;
+			children = (
+				CDE7E46E2C58D55200665747 /* DefineUrl.swift */,
+				CDE7E4872C58D7A400665747 /* DefineKey.swift */,
+				CDE7E48C2C58D89600665747 /* Define.swift */,
+				CDE7E48E2C58D8E200665747 /* DefineEnum.swift */,
+			);
+			path = "1. Define(Key, Enum, Size, Url)";
+			sourceTree = "<group>";
+		};
+		CDE7E46D2C58D4C100665747 /* 4. Api, Codables */ = {
+			isa = PBXGroup;
+			children = (
+				CDE7E4722C58D58800665747 /* ApiControl */,
+				CDE7E4712C58D58100665747 /* Apis */,
+				CDE7E4702C58D57700665747 /* Model */,
+			);
+			path = "4. Api, Codables";
+			sourceTree = "<group>";
+		};
+		CDE7E4702C58D57700665747 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDE7E4732C58D5A100665747 /* CommonModel.swift */,
+				CDE7E4752C58D5A900665747 /* ConfigModel.swift */,
+				CDE7E4772C58D5B400665747 /* WordListModel.swift */,
+				CDE7E4952C58E21E00665747 /* TodosModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CDE7E4712C58D58100665747 /* Apis */ = {
+			isa = PBXGroup;
+			children = (
+				CDE7E4792C58D5C100665747 /* Apis.swift */,
+				CDE7E47B2C58D5C900665747 /* Apis+WordList.swift */,
+				CDE7E4972C58E81A00665747 /* Apis+Todos.swift */,
+			);
+			path = Apis;
+			sourceTree = "<group>";
+		};
+		CDE7E4722C58D58800665747 /* ApiControl */ = {
+			isa = PBXGroup;
+			children = (
+				CDE7E47D2C58D5D200665747 /* ApiControl.swift */,
+				CDE7E47F2C58D5DA00665747 /* ApiControl+WordList.swift */,
+				CDE7E4992C58E82700665747 /* ApiControl+Todos.swift */,
+			);
+			path = ApiControl;
+			sourceTree = "<group>";
+		};
+		CDE7E4842C58D76A00665747 /* 3. Common(Function, Size) */ = {
+			isa = PBXGroup;
+			children = (
+				CDE7E4852C58D78B00665747 /* CommonFunction.swift */,
+			);
+			path = "3. Common(Function, Size)";
+			sourceTree = "<group>";
+		};
+		CDE7E4892C58D7C100665747 /* 2. Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CDE7E48A2C58D7CD00665747 /* UserManager.swift */,
+			);
+			path = "2. Manager";
+			sourceTree = "<group>";
+		};
+		CDE7E4902C58D98400665747 /* 13. Error */ = {
+			isa = PBXGroup;
+			children = (
+				CDE7E4912C58D99000665747 /* ApiError.swift */,
+			);
+			path = "13. Error";
+			sourceTree = "<group>";
+		};
 		E0FB7CA02C5664AC00D9C854 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +271,7 @@
 		E0FB7CD92C56650700D9C854 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				CDE7E46B2C58D48500665747 /* Data, Define, Functions, Modifier, Extension, Modules, Db */,
 				E0FB7CE22C566D7A00D9C854 /* Page */,
 				E0FB7CDA2C56652200D9C854 /* Screen.swift */,
 				E0FB7CEC2C56706100D9C854 /* MainNaviView.swift */,
@@ -167,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				E0FB7CF12C56797E00D9C854 /* Claude_ToDoApp.swift */,
+				CDE7E4932C58DD3D00665747 /* Claude_ToDoService.swift */,
 			);
 			path = Claude_ToDoApp;
 			sourceTree = "<group>";
@@ -189,6 +317,7 @@
 			name = LiveScore_Navigation;
 			packageProductDependencies = (
 				E0FB7CEA2C566DFF00D9C854 /* ComposableArchitecture */,
+				CDE7E4822C58D66300665747 /* Moya */,
 			);
 			productName = LiveScore_Navigation;
 			productReference = E0FB7CA92C5664AC00D9C854 /* LiveScore_Navigation.app */;
@@ -264,6 +393,7 @@
 			mainGroup = E0FB7CA02C5664AC00D9C854;
 			packageReferences = (
 				E0FB7CE92C566DFF00D9C854 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				CDE7E4812C58D66300665747 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = E0FB7CAA2C5664AC00D9C854 /* Products */;
 			projectDirPath = "";
@@ -307,14 +437,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE7E47C2C58D5C900665747 /* Apis+WordList.swift in Sources */,
 				E0FB7CE42C566D8B00D9C854 /* Step01Page.swift in Sources */,
+				CDE7E4982C58E81A00665747 /* Apis+Todos.swift in Sources */,
+				CDE7E48B2C58D7CD00665747 /* UserManager.swift in Sources */,
+				CDE7E4802C58D5DA00665747 /* ApiControl+WordList.swift in Sources */,
+				CDE7E4862C58D78B00665747 /* CommonFunction.swift in Sources */,
+				CDE7E4762C58D5A900665747 /* ConfigModel.swift in Sources */,
 				E0FB7CED2C56706100D9C854 /* MainNaviView.swift in Sources */,
+				CDE7E4882C58D7A400665747 /* DefineKey.swift in Sources */,
+				CDE7E4742C58D5A100665747 /* CommonModel.swift in Sources */,
+				CDE7E4942C58DD3D00665747 /* Claude_ToDoService.swift in Sources */,
 				E0FB7CEF2C5670AF00D9C854 /* AppState.swift in Sources */,
 				E0FB7CF22C56797E00D9C854 /* Claude_ToDoApp.swift in Sources */,
+				CDE7E4922C58D99000665747 /* ApiError.swift in Sources */,
+				CDE7E4962C58E21E00665747 /* TodosModel.swift in Sources */,
 				E0FB7CAD2C5664AC00D9C854 /* LiveScore_NavigationApp.swift in Sources */,
+				CDE7E47E2C58D5D200665747 /* ApiControl.swift in Sources */,
+				CDE7E46F2C58D55200665747 /* DefineUrl.swift in Sources */,
+				CDE7E47A2C58D5C100665747 /* Apis.swift in Sources */,
 				E0FB7CDB2C56652200D9C854 /* Screen.swift in Sources */,
 				E0FB7CE82C566D9E00D9C854 /* Step03Page.swift in Sources */,
 				E0FB7CE62C566D9500D9C854 /* Step02Page.swift in Sources */,
+				CDE7E48D2C58D89600665747 /* Define.swift in Sources */,
+				CDE7E4782C58D5B400665747 /* WordListModel.swift in Sources */,
+				CDE7E49A2C58E82700665747 /* ApiControl+Todos.swift in Sources */,
+				CDE7E48F2C58D8E200665747 /* DefineEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +629,7 @@
 				DEVELOPMENT_TEAM = RS7JFS2M68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LiveScore-Navigation-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -510,6 +659,7 @@
 				DEVELOPMENT_TEAM = RS7JFS2M68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LiveScore-Navigation-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -646,6 +796,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CDE7E4812C58D66300665747 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 		E0FB7CE92C566DFF00D9C854 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
@@ -657,6 +815,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CDE7E4822C58D66300665747 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDE7E4812C58D66300665747 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
 		E0FB7CEA2C566DFF00D9C854 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E0FB7CE92C566DFF00D9C854 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
